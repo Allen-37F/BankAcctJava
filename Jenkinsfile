@@ -19,6 +19,7 @@ pipeline {
                     }
 
                     timeout(time: 15, unit: 'SECONDS') {
+                        sh 'chmod +x ./health-check.sh'
                         sh './health-check.sh first second'
                     }
             }
