@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh 'echo "This is the deploy stage. It is broken on purpose."'
                     retry(3) {
-                        sh './flakey-deploy.sh'
+                        sh 'echo "Three retries. It may only do it once if succesful."'
                     }
 
                     timeout(time: 15, unit: 'SECONDS') {
