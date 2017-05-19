@@ -10,10 +10,15 @@ pipeline {
                     ls -lah
                 '''
             }
-        }    
+        }
         stage('Deploy') {
             steps {
                 sh 'echo "This is the deploy stage"'
+            }
+        }
+        stage('Health Checks' {
+            steps {
+                sh 'echo "Running health checks (Or pretending, at least)"'
             }
         }
     }
