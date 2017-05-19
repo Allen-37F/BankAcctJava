@@ -10,11 +10,11 @@ pipeline {
                     ls -lah
                 '''
             }
-           stage('Deploy') {
+        }    
+        stage('Deploy') {
             steps {
                 sh 'echo "This is the deploy stage"'
             }
-           }
         }
     }
 }
