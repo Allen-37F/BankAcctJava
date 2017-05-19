@@ -19,7 +19,7 @@ pipeline {
                     }
 
                     timeout(time: 15, unit: 'SECONDS') {
-                        sh './health-check.sh'
+                        sh './health-check.sh first second'
                     }
             }
         }
