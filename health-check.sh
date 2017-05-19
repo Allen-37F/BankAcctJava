@@ -1,3 +1,3 @@
 
-echo "First injected argument is $1"
-echo "Second argument is $2"
+echo "King Kong likes to eat $1"
+echo "Second parameter successfully $2"

@@ -18,11 +18,13 @@ pipeline {
                         sh 'echo "Three retries. It may only do it once if succesful."'
                     }
 
-                    timeout(time: 15, unit: 'SECONDS') {
+                    timeout(time: 2, unit: 'SECONDS') {
+                        sh 'echo "This will time out and fail if it does not complete in 2 seconds."'
                         sh 'chmod +x ./health-check.sh'
-                        sh './health-check.sh first second'
+                        sh './health-check.sh bananas injected'
                     }
             }
+
         }
         stage('Health Checks') {
             steps {
